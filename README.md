@@ -2,9 +2,9 @@
 
 ## Welcome to Codeville, and the 21-Day Coding Challenge!
 
-- Technology has reached Codeville, and as the mayor of this small hamlet, you have the task of finding ways to use technology to improve your town.
-
 ---
+
+Technology has reached Codeville, and as the mayor of this small hamlet, you have the task of finding ways to use technology to improve your town.
 
 ---
 
