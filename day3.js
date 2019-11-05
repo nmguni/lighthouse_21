@@ -1,7 +1,6 @@
 
 // Remember, the possible candidates are: Tim, Sally, and Beth (in that order)
 const castVote = (name, votes) => {
-    votes = [0, 0, 0];
 
     if (name === "Tim") {
         votes[0]++;
