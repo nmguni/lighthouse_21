@@ -19,41 +19,36 @@
       }
     </style>
     <h2>
-      Takes in an array of possible voting stations, and then only returns the
-      names of the stations that are appropriate. array within an array ( double
-      loop) name[0] capacity[1] value type[2]
+      Complete the function <code>voterTurnout()</code>, that will take in two
+      arrays. The first array is a list of voter ids, and the second array is a
+      list of voter signatures, which correspond to the voter ids. Our task here
+      is to first check that each array have the same number of items and then
+      confirm that each of the voter ids matches the corresponding voter
+      signature.
+      <br />
+      If the arrays do not contain the same number of items, then we know
+      something is amiss and our function should return false. If they contain
+      the same number of elements, then we should proceed to check if the two
+      arrays are identical. If they are, our function should return
+      <code
+        >"All clear, we can count the votes!", if they are not it should return
+        "FRAUD!".</code
+      >
     </h2>
 
-    <h2>
-      [
-      <span style="color: royalblue">
-        ['Big Bear Donair', 10, 'restaurant'],
-      </span>
-      <span style="color: red">
-        ['Bright Lights Elementary', 50, 'school'],
-      </span>
-      <span style="color: rebeccapurple ">
-        ['Bright Lights Elementary', 'Moose Mountain Community Centre']
-      </span>
-      ];
-    </h2>
     <script>
-      const chooseStations = stations => {
-        let results = [];
-        // loop thrugh stations 1 - 3
-        for (let i = 0; i < stations.length; i++) {
-          // loop inside array of each station
-          for (let j = 0; j < stations[i].length; j++) {
-            //-----
-            if (
-              stations[i][j] > 20 &&
-              (stations[i][j] == "school" ||
-                stations[i][j] == "community centre")
-            ) {
-              results.push(stations[i][0]);
-            }
-            return results;
+      const voterTurnout = (voter_signatures, voter_ids) => {
+        // check if # items are ==
+        if (voter_signatures.length == voter_ids.length) {
+          // check if items are identical w/ loop
+          for (let i = 0; i < voter_signatures.length; i++) {
+            console.log(voter_signatures[i]);
           }
+          for (let j = 0; j < voter_ids.length; j++) {
+            console.log(voter_ids[j]);
+          }
+        } else {
+          return false;
         }
       };
     </script>
