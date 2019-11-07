@@ -1,4 +1,6 @@
 
+
+//------------ first try 
 const chooseStations = (stations) => {
 
     // loop thrugh stations 1 - 3
@@ -36,11 +38,6 @@ const stations = [
 
 ['Bright Lights Elementary', 'Moose Mountain Community Centre']
 
-// 1. capacity > 20 
-// 2. index[2] = 'school' || 'community center'
-
-// first loop will loop through stations second loop will loop thru index 
-
 https://github.com/iamdp/21daycodingchallenge/blob/master/day5.js
 
 
@@ -54,12 +51,7 @@ const chooseStations = (stations) => {
 
     for (const station of stations) {
         const [name, capacity, venueType] = station;
-        /* 
-          The above code is called destructuring and is the same as writing:
-          const name = station[0];
-          const capacity = station[1];
-          const venueType = station[2];
-        */
+
         if (capacity >= 20 && (venueType === 'school' || venueType === 'community centre')) {
             appropirateVotingStations.push(name);
         }
