@@ -1,28 +1,63 @@
-// check that each array have the same number of items
-// confirm that each of the voter ids matches the corresponding voter signature.
 
-//If the arrays do not contain the same number of items, then we know something is amiss and our function should return false. If they contain the same number of elements, then we should proceed to check if the two arrays are identical. If they are, our function should return "All clear, we can count the votes!", if they are not it should return "FRAUD!".
+// const voterTurnout = (voter_signatures, voter_ids) => {
+//   // check if # items are ==
+//   if (voter_signatures.length == voter_ids.length) {
+//     // check if items are identical w/ loop
+//     for (let i = 0; i < voter_signatures.length; i++) {
+//       console.log(voter_signatures[i]);
+//     }
+//     for (let j = 0; j < voter_ids.length; j++) {
+//       console.log(voter_ids[j]);
+//     }
+//   } if() {
+//     return false;
+//   } else {
+//     return false
+//   }
+// };
 
+// const voterTurnout = (voter_signatures, voter_ids) => {
+//   if (voter_signatures.length == voter_ids.length) {
+//     for (let i = 0; i < voter_signatures.length; i++) {
+//       for (let j = 0; i < voter_ids.length; j++) {
+//         if (voter_signatures[i] == voter_ids[j]) {
+//           return "All clear, we can count the votes!";
+//         } else {
+//           return "FRAUD!";
+//         }
+//       }
+//     }
+//   } else {
+//     return false;
+//   }
+// };
 
-// 1. check num items & if they are == then move proced to next step 
-// if false return false 
+// const voterTurnout = (voter_signatures, voter_ids) => {
+//   // Check if the arrays are the same length
+//   if (voter_signatures.length !== voter_ids.length) return false;
 
-// 2. if items == then check if items are identical 
-// if false return false
+//   for (var i = 0; voter_signatures.length < i; i++) {
+//     if (voter_signatures[i] !== voter_ids[i]) return "FRAUD";
+//   }
 
-// 3. if identical then true...
+//   // Otherwise, return true
+//   return "All clear, we can count the votes!";
+// };
 
-// input 
-
+// ------------------------
 
 const voterTurnout = (voter_signatures, voter_ids) => {
+    // Check if the arrays are the same length
+    if (voter_signatures.length !== voter_ids.length) return false;
 
-    if (voter_signatures.length == voter_ids) {
-        return true
-    } else {
-        return false
+    // Check if all items exist and are in the same order
+    for (var i = 0; i < voter_signatures.length; i++) {
+        if (voter_signatures[i] !== voter_ids[i]) return "FRAUD!";
     }
 
+    // Otherwise, return true
+    return "All clear, we can count the votes!";
+};
 
 
-}
+https://gomakethings.com/how-to-check-if-two-arrays-are-equal-with-vanilla-js/
