@@ -1,31 +1,31 @@
-smartGarbage(trash, bins)
-
-// trash  - string that tells what type of item is being submtted 
-// bins - object containing 3 props (waste, recycling, and compost) alos holds neumerical value 
-// func must increase the correct value in bins obj
-
-// input 
+// const trash = "recycling";
+// checking trash for bins
 const bins = {
     waste: 4,
     recycling: 2,
     compost: 5
-}
+};
 
-const trash = 'recycling'
-// output 
-{
-    waste: 4,
-        recycling: 3,
-            compost: 5
-}
+const trash = "recycling";
 
-// obj.keys will make array of obj's propertes 
-// loop thru props 
-// use if to match trash with obj
+// for (const prop in bins) {
+//   console.log(prop[trash]);
+// }
 
-// read string and increase object 
 const smartGarbage = (trash, bins) => {
-    //   l
+    // get properties of bin
+    let bin = Object.keys(bins);
+    // iterate over props & log
+    bin.forEach(function (el) {
+        // checking if trash is  a prop
+        if (el == trash) {
+            // if ture search obj for trsah
+            let ans = (bins[trash] += 1);
 
-}
+            //  incres obj num by 1
 
+            // return obj
+            return ans;
+        }
+    });
+};
