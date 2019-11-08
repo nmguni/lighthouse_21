@@ -8,6 +8,28 @@
   </head>
 
   <body>
-    <script></script>
+    <script>
+      // const trash = "recycling";
+
+      const bins = {
+        waste: 4,
+        recycling: 2,
+        compost: 5
+      };
+
+      const trash = "recycling";
+
+      for (const prop in bins) {
+        console.log(prop[trash]);
+      }
+
+      const smartGarbage = (trash, bins) => {
+        for (const prop in bins) {
+          let ans = prop;
+          return ans;
+        }
+        console.log(ans);
+      };
+    </script>
   </body>
 </html>
