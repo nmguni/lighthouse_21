@@ -31,7 +31,7 @@ const carPassing = (cars, speed) => [...cars, { speed, time: Date.now() }];
 
 const speed = 38;
 
-const carPassing = (cars, speed) => {
+const carPass = (cars, speed) => {
     let newObj = { time: Date.now(), speed: speed };
 
     let car = cars.push(newObj);
