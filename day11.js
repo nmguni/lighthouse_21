@@ -1,5 +1,11 @@
-// cal arival time for busses distance / speed
-// return  obj with disdanes
+
+const busTimes = buses => {
+    Object.keys(buses).forEach(dest => {
+        buses[dest] = (buses[dest].distance / buses[dest].speed);
+    });
+    return (buses);
+};
+
 
 //  input
 const buses = {
