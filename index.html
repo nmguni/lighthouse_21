@@ -9,42 +9,41 @@
 
   <body>
     <script>
-      const samples = [
-        "clean",
-        "clean",
-        "dirty",
-        "clean",
-        "dirty",
-        "clean",
-        "clean",
-        "dirty",
-        "clean",
-        "dirty"
-      ];
-
-      const threshold = 0.3;
-
-      const checkAir = function(samples, threshold) {
-        let cleanCount = [];
-        let dirtyCount = [];
-        let results = samples.filter(x => {
-          if (x == "clean") {
-            cleanCount.push(x);
-          } else if (x == "dirty") {
-            dirtyCount.push(x);
-          }
-        });
-        // find %
-        let percentage = dirtyCount.length / cleanCount.length;
-        // check if % is < or > then threshold
-        if (percentage > threshold) {
-          return "Polluted";
-        } else if (percentage < threshold) {
-          return "Clean";
+      // lights on
+      const lights = [
+        {
+          id: 1,
+          on: false
+        },
+        {
+          id: 2,
+          on: false
+        },
+        {
+          id: 3,
+          on: false
+        },
+        {
+          id: 4,
+          on: false
+        },
+        {
+          id: 5,
+          on: false
         }
+      ];
+      for (let i = 0; i > lights.length; i++) {
+        console.log(lights[i]);
+      }
+
+      // set all lights to on and return the aryy of lights
+      const lightsOn = function(lights) {
+        lights.forEach(light => {
+          console.log(light.id);
+        });
       };
 
-      checkAir(samples, threshold);
+      lightsOn(lights);
     </script>
   </body>
 </html>
