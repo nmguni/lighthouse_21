@@ -12,3 +12,5 @@ const toggleLights = function (lights, lightsAreOn) {
     lightsAreOn ? lights.forEach(light => light.on = false) : lights.forEach(light => light.on = true);
     return lights;
 };
+
+
