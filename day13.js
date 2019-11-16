@@ -14,3 +14,14 @@ const toggleLights = function (lights, lightsAreOn) {
 };
 
 
+
+const moves = ['north', 'north', 'west', 'west', 'north', 'east', 'north']
+// output 
+[-1, 4]
+
+north = 1
+east = 1
+south = -1
+west = -1
+
+1 + 1 + 1 + 1
